@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: user-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/userdb?options=-c%20TimeZone=Asia/Kolkata
+    username: postgres
+    password: pass123
+
+  jpa:
+    database: PostgreSQL
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    hibernate:
+      ddl-auto: create-drop
+
+server:
+  port: 8081
+
+logging:
+  level:
+    org.hibernate.tool.schema: DEBUG
